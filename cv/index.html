@@ -53,8 +53,21 @@
 <li><i class="fas fa-fw fa-toolbox"></i><span class="sr">Work with</span>: <span class="hltd">Notepad++, PuTTy</span></li>
 </ul>
 </div>
+<h3>Contact</h3>
+<div class="links">
+<ul>
+<li><i class="fas fa-fw fa-envelope"></i><span class="sr">e-mail</span>: <span class="hltd"><a id="contact-link" href="#" data-secret="a2lyaWxsa3Jhc2luQGdtYWlsLmNvbQ==">[Javascript required]</a></span></li>
+</ul>
+</div>
 <style>@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');</style>
 <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 <script>$(window).load(function(){$('.loader').fadeOut();});</script>
+  <script>
+window.onload = function() {
+  var contact = document.getElementById("contact-link");
+  contact.textContent = atob(contact.dataset.secret);
+  contact.href = atob("bWFpbHRvOg==") + atob(contact.dataset.secret);
+};
+</script>
 </body>
 </html>
