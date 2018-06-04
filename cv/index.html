@@ -61,13 +61,17 @@
 </div>
 <style>@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');</style>
 <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script>$(window).load(function(){$('.loader').fadeOut();});</script>
-  <script>
-window.onload = function() {
+<script>$(window).load(function(){$('.loader').fadeOut();
+                                 
+                                  var contact = document.getElementById("contact-link");
+  contact.textContent = atob(contact.dataset.secret);
+  contact.href = atob("bWFpbHRvOg==") + atob(contact.dataset.secret);
+                                  
+                                 });</script>
+<!-- script>window.onload = function() {
   var contact = document.getElementById("contact-link");
   contact.textContent = atob(contact.dataset.secret);
   contact.href = atob("bWFpbHRvOg==") + atob(contact.dataset.secret);
-};
-</script>
+};</script -->
 </body>
 </html>
